@@ -2,7 +2,7 @@ rwristx = 0;
 lwristx = 0;
 rwristy = 0;
 lwristy = 0;
-
+music = "";
 
 function preload(){
     music = loadSound("music.mp3");
@@ -32,7 +32,7 @@ function play()
 }
 function gotPoses(result)
 {
-    if(results.length != 0)
+    if(result.length != 0)
     {
         w = result[0].pose
         rw = w.rightWrist
