@@ -49,7 +49,7 @@ function play()
 function gotPoses(result)
 {
     if(result.length != 0)
-    {
+    {   sn = 9
         w = result[0].pose
         rw = w.rightWrist
         lw = w.leftWrist
@@ -57,8 +57,8 @@ function gotPoses(result)
         rwristy = rw.y;
         lwristx = lw.x;
         lwristy = lw.y;
-        scorel = w.keypoints[9].score
-        scorer = w.keypoints[10].score
+        scorel = w.keypoints[++sn].score;
+        scorer = scorel;
     }
 }
 function checkrw()
